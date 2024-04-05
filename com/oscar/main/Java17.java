@@ -5,6 +5,7 @@ import com.oscar.enums.SeasonComplex;
 import com.oscar.enums.SeasonSimple;
 import com.oscar.interfaces.AnimalI;
 import com.oscar.lambdas.lambdas;
+import com.oscar.streams.Streams;
 
 import java.util.*;
 import java.util.logging.Logger;
@@ -18,7 +19,8 @@ public class Java17 {
         //enums();
        //lambdas();
         //usaa();
-        collections();
+        //collections();
+        streams();
 
     }
 
@@ -46,6 +48,12 @@ public class Java17 {
         CollectionsPractice collectionsPractice= new CollectionsPractice();
         collectionsPractice.start();
     }
+    private static void streams() {
+        Streams streams= new Streams();
+        streams.start();
+    }
+
+
 
     private static void enums() {
         //You can use equals or == to compare

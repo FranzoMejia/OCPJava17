@@ -1,12 +1,14 @@
 package com.oscar.collectionsandgenerics;
 
+import com.oscar.interfaces.Chapter;
+
 import java.util.*;
 import java.util.function.BiFunction;
 import java.util.function.BinaryOperator;
 
 //A collection is a group of objects contained in a single object
 //Collection framework is in java.util
-public class CollectionsPractice {
+public class CollectionsPractice implements Chapter {
     //There are four main interfaces in Java Collections Frameworks
     //List, Queue , Set and Map
 
