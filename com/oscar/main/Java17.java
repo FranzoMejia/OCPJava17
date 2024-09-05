@@ -3,6 +3,7 @@ package com.oscar.main;
 import com.oscar.collectionsandgenerics.CollectionsPractice;
 import com.oscar.enums.SeasonComplex;
 import com.oscar.enums.SeasonSimple;
+import com.oscar.exceptionsandlocalization.ExceptionsAndLocalizations;
 import com.oscar.interfaces.AnimalI;
 import com.oscar.lambdas.lambdas;
 import com.oscar.streams.Streams;
@@ -20,8 +21,14 @@ public class Java17 {
        //lambdas();
         //usaa();
         //collections();
-        streams();
+        //streams();
+        exceptions();
 
+    }
+
+    private static void exceptions() {
+        ExceptionsAndLocalizations e= new ExceptionsAndLocalizations();
+        e.start();
     }
 
     private static void usaa() {
