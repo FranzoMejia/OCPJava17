@@ -21,8 +21,8 @@ public class Java17 {
        //lambdas();
         //usaa();
         //collections();
-        //streams();
-        exceptions();
+        streams();
+        //exceptions();
 
     }
 
