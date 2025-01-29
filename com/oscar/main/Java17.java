@@ -7,6 +7,7 @@ import com.oscar.exceptionsandlocalization.ExceptionsAndLocalizations;
 import com.oscar.interfaces.AnimalI;
 import com.oscar.lambdas.lambdas;
 import com.oscar.streams.Streams;
+import com.oscar.threads.Threads;
 
 import java.util.*;
 import java.util.logging.Logger;
@@ -21,9 +22,15 @@ public class Java17 {
        //lambdas();
         //usaa();
         //collections();
-        streams();
+        //streams();
         //exceptions();
+        threads();
 
+    }
+
+    private static void threads() {
+        Threads e = new Threads();
+        e.start();
     }
 
     private static void exceptions() {
