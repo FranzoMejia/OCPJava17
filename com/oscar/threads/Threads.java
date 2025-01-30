@@ -22,8 +22,8 @@ public class Threads implements Chapter {
     };
     @Override
     public void start() {
-        //threadsBasics();
-        //councurrencyAPI();
+        threadsBasics();
+        councurrencyAPI();
         concurrentCollections();
 
 
@@ -32,7 +32,7 @@ public class Threads implements Chapter {
     private void concurrentCollections() {
         //A memory consistency error - is when two threads have inconsistent views of what should be the same data (ConcurrentModificationException)
         //Concurrent classes were created to help avoid common issues which multiple threads add/remove objects for the same collection
-        //You should use concurrent when you have multiple threads trying to modify the sema collection
+        //You should use concurrent when you have multiple threads trying to modify the same collection
 
         //The Skip classes are just sorted versions
         //The CopyOnWrite classes creates a copy of the collection any time a reference is added, removed, or changed in the collection and then update the original collection to the new copy
@@ -123,7 +123,7 @@ public class Threads implements Chapter {
             serviceSingle.execute(printInventory);
             System.out.println("++++END++++");
         } catch (InterruptedException e) {
-            throw new RuntimeException(e);
+            System.out.println("InterruptedException");
         }
         finally {
             //it is important that you call the shutdown()
@@ -333,7 +333,7 @@ public class Threads implements Chapter {
         //thread priority - numeric value(integer) associated to thread execution property
 
 
-        //Runnable is fi that takes no arguments and returns no data
+        //Runnable is  a fi that takes no arguments and returns no data
         //starts() start the thread execution
         //asynchronous - we mean that the thread executing main() does not wait for the results of each new thread created
         //synchronous - the program wait for thread to executing before moving on to the next step
@@ -371,19 +371,24 @@ public class Threads implements Chapter {
         new Thread(()->{
             for (int i = 0; i < 1_000_000; i++) {
                 counter++;
-                mainThread.interrupt();
             }
+            mainThread.interrupt();
         }).start();
         while (counter<1_000_000) {
             System.out.println("Not reatched");
             try {
                 Thread.sleep(1);
-
             } catch (InterruptedException e) {
                 System.out.println("INTERRUPTED");;
             }
         }
         System.out.println("reatched");
+
+        try {
+            Thread.sleep(5_000);
+        } catch (InterruptedException e) {
+            throw new RuntimeException(e);
+        }
 
         //Interrupting a Thread
         //Calling interrupt() on a thread in the TIME_WAITING or WAITING states causes the main() triggering a InterruptedException
