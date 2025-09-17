@@ -5,6 +5,7 @@ import com.oscar.enums.SeasonComplex;
 import com.oscar.enums.SeasonSimple;
 import com.oscar.exceptionsandlocalization.ExceptionsAndLocalizations;
 import com.oscar.interfaces.AnimalI;
+import com.oscar.io.IO;
 import com.oscar.lambdas.lambdas;
 import com.oscar.streams.Streams;
 import com.oscar.threads.Threads;
@@ -24,8 +25,14 @@ public class Java17 {
         //collections();
         //streams();
         //exceptions();
-        threads();
+        //threads();
+        io();
 
+    }
+
+    private static void io() {
+        IO e= new IO();
+        e.start();
     }
 
     private static void threads() {
