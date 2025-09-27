@@ -97,6 +97,7 @@ public class IO implements Chapter {
             System.out.println("Is symbolic link: "+basicAttr.isSymbolicLink());
             System.out.println("Size: "+basicAttr.size());
 
+
             BasicFileAttributeView basicView = Files.getFileAttributeView(path,BasicFileAttributeView.class);
             basicView.setTimes(FileTime.fromMillis(System.currentTimeMillis()),null,null);
 

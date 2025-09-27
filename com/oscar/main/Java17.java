@@ -6,6 +6,7 @@ import com.oscar.enums.SeasonSimple;
 import com.oscar.exceptionsandlocalization.ExceptionsAndLocalizations;
 import com.oscar.interfaces.AnimalI;
 import com.oscar.io.IO;
+import com.oscar.jdbc.JDBC;
 import com.oscar.lambdas.lambdas;
 import com.oscar.streams.Streams;
 import com.oscar.threads.Threads;
@@ -26,8 +27,14 @@ public class Java17 {
         //streams();
         //exceptions();
         //threads();
-        io();
+        //io();
+        jdbc();
 
+    }
+
+    private static void jdbc() {
+        JDBC e= new JDBC();
+        e.start();
     }
 
     private static void io() {
